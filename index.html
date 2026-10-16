@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff3f8">
+  <meta name="description" content="A little birthday surprise made with love, just for you.">
+  <title>A Little Birthday Surprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+  <div class="sparkle-field" aria-hidden="true">
+    <span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span>
+    <span>✧</span><span>·</span><span>✦</span><span>·</span><span>✧</span>
+    <span>·</span><span>✦</span><span>✧</span><span>·</span><span>✦</span>
+  </div>
+  <main class="experience">
+    <section class="screen screen--welcome" id="welcome-screen" aria-labelledby="welcome-title">
+      <div class="welcome-card">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MADE WITH LOVE, JUST FOR YOU <span class="eyebrow-line"></span></p>
+        <div class="welcome-heart" aria-hidden="true">♡</div>
+        <h1 id="welcome-title" tabindex="-1">A Little Surprise<br>for Someone Special <span class="pink-heart" aria-label="love">💗</span></h1>
+        <p class="welcome-copy">A little birthday magic is waiting just for you.</p>
+        <button class="primary-button" id="open-surprise" type="button"><span>TAP TO OPEN YOUR SURPRISE</span><span aria-hidden="true">✧</span></button>
+        <p class="tiny-note">A tiny moment, with all my love</p>
+      </div>
+      <span class="orbit-heart orbit-heart--one" aria-hidden="true">♡</span>
+      <span class="orbit-heart orbit-heart--two" aria-hidden="true">♡</span>
+      <span class="orbit-heart orbit-heart--three" aria-hidden="true">♡</span>
+    </section>
+
+    <section class="screen screen--cake" id="cake-screen" aria-labelledby="cake-heading" hidden>
+      <div class="cake-scene">
+        <p class="eyebrow">A WISH IS WAITING</p>
+        <h2 class="scene-heading" id="cake-heading" tabindex="-1">Make this moment yours</h2>
+        <div class="cake-wrap" id="cake-wrap" aria-hidden="true">
+          <div class="cake-bouquet cake-bouquet--left">
+            <span class="bouquet-stems"></span>
+            <span class="bouquet-leaf bouquet-leaf--one"></span>
+            <span class="bouquet-leaf bouquet-leaf--two"></span>
+            <span class="bouquet-flower bouquet-flower--one"></span>
+            <span class="bouquet-flower bouquet-flower--two"></span>
+            <span class="bouquet-flower bouquet-flower--three"></span>
+            <span class="bouquet-flower bouquet-flower--four"></span>
+            <span class="bouquet-ribbon"></span>
+          </div>
+          <div class="cake-bouquet cake-bouquet--right">
+            <span class="bouquet-stems"></span>
+            <span class="bouquet-leaf bouquet-leaf--one"></span>
+            <span class="bouquet-leaf bouquet-leaf--two"></span>
+            <span class="bouquet-flower bouquet-flower--one"></span>
+            <span class="bouquet-flower bouquet-flower--two"></span>
+            <span class="bouquet-flower bouquet-flower--three"></span>
+            <span class="bouquet-flower bouquet-flower--four"></span>
+            <span class="bouquet-ribbon"></span>
+          </div>
+          <div class="cake">
+            <div class="candle" aria-label="Number 21 birthday candle">
+              <span class="candle-digit">2</span><span class="candle-digit">1</span>
+              <span class="candle-flame candle-flame--left"><i class="flame"></i><i class="smoke"></i></span>
+              <span class="candle-flame candle-flame--right"><i class="flame"></i><i class="smoke"></i></span>
+            </div>
+            <div class="cake-top">
+              <span class="icing-drip"></span><span class="icing-drip"></span><span class="icing-drip"></span>
+              <span class="cake-rose cake-rose--top"></span>
+              <span class="cake-berry cake-berry--top"></span>
+            </div>
+            <div class="cake-middle">
+              <span class="cake-pearl"></span><span class="cake-pearl"></span><span class="cake-pearl"></span><span class="cake-pearl"></span>
+              <span class="cake-rose cake-rose--middle"></span>
+              <span class="cake-berry cake-berry--middle"></span>
+            </div>
+            <div class="cake-bottom">
+              <span class="cake-pearl"></span><span class="cake-pearl"></span><span class="cake-pearl"></span><span class="cake-pearl"></span>
+              <span class="cake-rose cake-rose--bottom"></span>
+              <span class="cake-berry cake-berry--bottom"></span>
+            </div>
+            <div class="cake-plate"></div>
+          </div>
+          <span class="cake-heart cake-heart--one">♡</span>
+          <span class="cake-heart cake-heart--two">♡</span>
+          <span class="cake-heart cake-heart--three">✦</span>
+        </div>
+        <p class="countdown" id="countdown" aria-live="assertive" aria-atomic="true"></p>
+        <p class="wish-message" id="wish-message" aria-live="polite">Make a wish, my love. <span aria-hidden="true">✨</span></p>
+      </div>
+    </section>
+
+    <section class="screen screen--celebration" id="celebration-screen" aria-labelledby="birthday-title" hidden>
+      <div class="celebration-particles" id="celebration-particles" aria-hidden="true"></div>
+      <div class="celebration-content">
+        <p class="eyebrow">TODAY THE WHOLE WORLD CELEBRATES YOU</p>
+        <div class="birthday-cake-icon" aria-hidden="true">🎂</div>
+        <h2 class="birthday-title" id="birthday-title" tabindex="-1">
+          <span class="birthday-title__first"><span class="birthday-title__happy">Happy</span> <span class="birthday-title__age">21st</span></span>
+          <span class="birthday-title__birthday">Birthday!</span>
+          <span class="birthday-title__dedication">My prettiest girl <span class="pink-heart" aria-label="love">♡</span></span>
+        </h2>
+        <p class="birthday-copy">Today is all about you, beautiful.<br>You deserve all the happiness in the world.</p>
+        <div class="celebration-flourish" aria-hidden="true">✧ &nbsp; ♡ &nbsp; ✧</div>
+        <button class="primary-button celebration-next" id="next-to-gift" type="button">
+          <span>CONTINUE TO YOUR SURPRISE</span><span aria-hidden="true">♡</span>
+        </button>
+      </div>
+      <button class="sound-button" id="sound-toggle" type="button" aria-pressed="true" aria-label="Turn celebration music off"><span aria-hidden="true">♫</span><span class="sound-label">Music on</span></button>
+    </section>
+
+    <section class="screen screen--gift" id="gift-screen" aria-labelledby="gift-heading" hidden>
+      <div class="gift-content">
+        <p class="eyebrow">JUST ONE MORE LITTLE THING</p>
+        <h2 class="scene-heading" id="gift-heading" tabindex="-1">There’s something for you</h2>
+        <p class="gift-instruction">I have one more surprise for you. Tap your gift! <span aria-hidden="true">🎁</span></p>
+        <button class="gift-button" id="open-gift" type="button" aria-label="Open your birthday gift">
+          <span class="gift-box" id="gift-box" aria-hidden="true"><span class="gift-glow"></span><span class="gift-lid"><span class="gift-bow"></span></span><span class="gift-body"><span class="gift-ribbon"></span></span></span>
+        </button>
+        <p class="gift-hint" id="gift-hint">Go on, pretty girl ♡</p>
+        <div class="gift-reveal" id="gift-reveal" hidden>
+          <div class="cake-bouquet gift-bouquet" aria-label="A bouquet of pink roses">
+            <span class="bouquet-stems"></span>
+            <span class="bouquet-wrap"></span>
+            <span class="bouquet-leaf bouquet-leaf--one"></span>
+            <span class="bouquet-leaf bouquet-leaf--two"></span>
+            <span class="bouquet-leaf bouquet-leaf--three"></span>
+            <span class="bouquet-leaf bouquet-leaf--four"></span>
+            <span class="bouquet-flower bouquet-flower--one"></span>
+            <span class="bouquet-flower bouquet-flower--two"></span>
+            <span class="bouquet-flower bouquet-flower--three"></span>
+            <span class="bouquet-flower bouquet-flower--four"></span>
+            <span class="bouquet-flower bouquet-flower--five"></span>
+            <span class="bouquet-flower bouquet-flower--six"></span>
+            <span class="bouquet-ribbon"></span>
+          </div>
+          <button class="love-note" id="open-love-note" type="button" aria-label="Open your birthday letter">
+            <span class="love-note__seal" aria-hidden="true">♡</span>
+            <span class="love-note__label">A letter for you</span>
+            <span class="love-note__hint">Tap to read</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--letter" id="letter-screen" aria-labelledby="letter-title" hidden>
+      <article class="letter-card">
+        <div class="letter-decoration" aria-hidden="true">✧ &nbsp; ♡ &nbsp; ✧</div>
+        <p class="eyebrow">A LETTER FROM MY HEART</p>
+        <h2 id="letter-title" tabindex="-1">To my beautiful girl</h2>
+        <div class="letter-copy">
+          <p><strong>Happy 21st birthday, my prettiest girl! 💗🎂</strong></p>
+          <p>To my beautiful, caring, cute, and sexy girl, I want you to know how proud I am of you. I know you've made sacrifices for your family, putting your studies and dreams on hold so you could take care of your mom and look after your home. That shows how loving and selfless you are, and I hope you never forget that your dreams matter, too.</p>
+          <p>You deserve happiness, rest, love, and the chance to achieve everything your heart wishes for. I'm proud of the woman you are becoming, and I hope this new chapter brings you beautiful opportunities and reasons to smile.</p>
+          <p>Never forget that you're more than enough, my love. You're beautiful inside and out, and I'll always be cheering for you and your dreams.</p>
+          <p class="letter-signoff"><strong>Happy 21st birthday, my prettiest girl. You deserve the world. I love you Mary Faith Dela Cruz Texson! 💗🌷🎀</strong></p>
+        </div>
+        <button class="primary-button letter-button" id="to-final" type="button"><span>ONE LAST LITTLE SURPRISE</span><span aria-hidden="true">♡</span></button>
+      </article>
+    </section>
+
+    <section class="screen screen--final" id="final-screen" aria-labelledby="final-title" hidden>
+      <div class="final-content">
+        <div class="final-hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span></div>
+        <p class="eyebrow">MY FAVORITE PERSON, FOREVER</p>
+        <h2 id="final-title" tabindex="-1">You deserve all the love in the universe.</h2>
+        <p class="final-message">I love you, birthday girl. <span aria-hidden="true">💖</span></p>
+        <div class="final-divider" aria-hidden="true">✧ &nbsp; ♡ &nbsp; ✧</div>
+        <button class="primary-button replay-button" id="replay" type="button"><span>REPLAY YOUR SURPRISE</span><span aria-hidden="true">↻</span></button>
+      </div>
+    </section>
+    <p class="screen-reader-only" id="experience-status" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
